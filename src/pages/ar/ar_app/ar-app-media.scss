@@ -1,0 +1,265 @@
+@import "../../../sass/variables.scss";
+
+@media #{$maxLG} {
+  .arabic-page {
+    .second-section {
+      .enjoy-tv,
+      .download-shows,
+      .watch-everywhere,
+      .kids {
+        height: 469px !important;
+        .inner-container {
+          width: 920px !important;
+        }
+      }
+    }
+
+    .third-section {
+      .questions {
+        width: 80% !important;
+      }
+    }
+  }
+}
+
+@media #{$maxMD} {
+  .arabic-page {
+    .second-section {
+      .enjoy-tv,
+      .download-shows,
+      .watch-everywhere,
+      .kids {
+        border-top: 7px solid rgba(#999999, 0.5) !important ;
+        height: 402px !important;
+        .inner-container {
+          width: 650px !important;
+          .text-container {
+            width: 90% !important ;
+            h1 {
+              font-size: 25px !important;
+            }
+            p {
+              font-size: 18px !important;
+            }
+          }
+          .screen {
+            width: 85% !important ;
+            height: 75% !important ;
+          }
+        }
+      }
+      .download-shows .download {
+        height: 22.5% !important;
+        width: 230px !important;
+        .texts {
+          @include prefixer(
+            transform,
+            translate(0) !important,
+            webkit moz o ms
+          );
+          transform: translateX(0) !important;
+          h4 {
+            font-size: 13px !important ;
+          }
+          span {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+    .third-section {
+      h1 {
+        font-size: 30px !important ;
+      }
+      .questions {
+        width: 650px !important;
+        .question {
+          .the-question {
+            padding: 0 15px !important;
+            #{$padding2}: 30px !important ;
+            h2 {
+              font-size: 20px !important;
+            }
+            .marks {
+              i {
+                font-size: 17px !important;
+              }
+            }
+          }
+          .the-answer {
+            #{$padding2}: 30px !important ;
+            article {
+              font-size: 17px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$maxSM} {
+  .arabic-page {
+    .first-section {
+      .container .elements {
+        width: 90% !important;
+        h1 {
+          font-size: 30px !important;
+        }
+        h3 {
+          font-size: 20px !important ;
+        }
+        .h4-large {
+          display: none !important;
+        }
+        .h4-small {
+          display: block !important;
+        }
+        .inputs {
+          input,
+          button {
+            height: 40px !important;
+            font-size: 17px !important ;
+          }
+          input {
+            width: 100% !important;
+          }
+          button {
+            display: block !important;
+            margin: 0 auto !important ;
+            margin-top: 13.4px !important ;
+          }
+          button {
+            span,
+            i {
+              font-size: 15px !important ;
+            }
+          }
+        }
+      }
+    }
+
+    .second-section {
+      .enjoy-tv,
+      .download-shows,
+      .watch-everywhere,
+      .kids {
+        height: 495.8px !important ;
+        .inner-container {
+          width: 90% !important ;
+          .text {
+            width: 100% !important ;
+            text-align: center;
+            @include prefixer(float, unset !important, webkit moz o ms);
+            float: unset !important;
+            height: 167.5px !important;
+            .text-container {
+              h1 {
+                font-size: 20px !important;
+              }
+              p {
+                font-size: 14px !important;
+                margin-top: 13.4px !important;
+              }
+            }
+          }
+          .gallery {
+            height: 268px !important ;
+            @include prefixer(float, unset !important, webkit moz o ms);
+            float: unset !important;
+            margin: 0 auto !important;
+            width: 100% !important ;
+            .screen {
+              width: 75% !important ;
+              height: 80% !important ;
+            }
+          }
+        }
+      }
+
+      .download-shows,
+      .kids {
+        .inner-container {
+          position: relative;
+          .gallery {
+            position: absolute;
+            #{$direction1}: 50%;
+            bottom: 53.6px !important;
+            @include prefixer(transform, translateX(-50%), webkit moz o ms);
+            transform: translateX(-50%);
+          }
+          .text {
+            position: absolute;
+            top: 0;
+            #{$direction1}: 0;
+          }
+        }
+      }
+    }
+    .third-section {
+      padding-bottom: 70px;
+      h1 {
+        font-size: 25px !important ;
+      }
+      .questions {
+        width: 90% !important;
+        .question {
+          .the-question {
+            height: 60.3px !important;
+            padding: 0 10px !important;
+            padding: 0 15px !important;
+            h2 {
+              font-size: 16px !important;
+            }
+            .marks {
+              #{$direction2}: -10px !important;
+              i {
+                font-size: 14px !important;
+              }
+            }
+          }
+          .the-answer {
+            padding: 0 15px !important;
+            article {
+              padding: 15px 0 !important;
+              font-size: 15px !important;
+            }
+          }
+        }
+      }
+      h4 {
+        width: 85% !important;
+        margin: 0 auto !important;
+        margin-top: 53.6px !important;
+      }
+      .h4-large {
+        display: none;
+      }
+      .h4-small {
+        display: block !important ;
+      }
+
+      .inputs {
+        width: 90% !important ;
+        input,
+        button {
+          height: 40px !important;
+          font-size: 17px !important ;
+        }
+        input {
+          width: 100% !important;
+        }
+        button {
+          display: block !important;
+          margin: 0 auto !important ;
+          margin-top: 30px !important ;
+        }
+        button {
+          span,
+          i {
+            font-size: 15px !important ;
+          }
+        }
+      }
+    }
+  }
+}

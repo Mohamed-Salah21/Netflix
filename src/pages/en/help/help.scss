@@ -1,0 +1,228 @@
+@import "../../../sass/variables.scss";
+
+.helping-page {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../media/helping-page.jpg");
+  position: relative;
+  height: 1110px;
+  .container {
+    position: absolute;
+    top: 0;
+    #{$direction1}: 0;
+    height: 100%;
+    width: 100%;
+    nav {
+      position: absolute;
+      top: 26.8px;
+      #{$direction1}: 50%;
+      z-index: 110;
+      width: 95%;
+      @include prefixer(transform, translateX(-50%), webkit moz o ms);
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        text-transform: uppercase;
+        font-family: monospace;
+        cursor: pointer;
+        a {
+          color: $red;
+          font-size: 45px;
+          text-decoration: none;
+        }
+      }
+      h5 {
+        cursor: pointer;
+        a {
+          color: $red;
+          text-decoration: none;
+          text-decoration: underline;
+          font-size: 22px;
+        }
+      }
+    }
+    .helping-elements {
+      position: absolute;
+      width: 480px;
+      #{$direction1}: 50%;
+      top: 134px;
+      transform: translateX(-50%);
+      background-color: #f3f3f3;
+      height: 470.5px;
+      .container2 {
+        padding: 40px;
+        h4 {
+          font-size: 30px;
+          font-weight: normal;
+        }
+        h5 {
+          font-size: 15px;
+          display: block;
+          margin: 20px 0;
+          font-weight: normal;
+        }
+        .radio-inputs {
+          padding-left: 15px;
+          label {
+            margin-left: 6px;
+            outline: 0;
+          }
+        }
+        article {
+          margin: 20.1px 0;
+        }
+        .input {
+          height: 55px;
+          input {
+            height: 100%;
+            width: 100%;
+            font-size: 17px;
+            padding-left: 20px;
+            outline: 0;
+            border: 1px solid #999;
+          }
+        }
+        .input-ReactPhone {
+          position: relative;
+          border: 1px solid #999;
+          width: 80%;
+          border-radius: 0px !important ;
+          .form-control {
+            padding: 15.3px 0 15.3px 80px;
+            border: 0;
+            outline: 0;
+          }
+          .flag-dropdown {
+            border: 0 !important ;
+            border-right: 1px solid #999 !important ;
+            .selected-flag {
+              background-color: #fff !important ;
+              width: 70px !important;
+              .flag {
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+          }
+          .country-list {
+            transform: translateX(0);
+          }
+        }
+        button {
+          width: 100%;
+          margin-top: 20.1px;
+          font-size: 20px;
+          background-color: #017df9;
+          color: #fff;
+          outline: 0;
+          border: 0;
+          height: 55px;
+          text-transform: capitalize;
+          cursor: pointer;
+          &:hover {
+            background-color: #2490fd;
+          }
+        }
+        a {
+          text-decoration: none;
+          margin-top: 15px;
+          color: #017df9;
+          display: block;
+        }
+      }
+    }
+    .articles {
+      color: #999;
+      margin-top: 10.5px;
+      span,
+      a {
+        color: #999;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .article {
+        margin-top: 13.4px;
+      }
+    }
+  }
+  // footer's component styling
+  @import "../../../components/en/another_footer/footer2-en.scss";
+  @import "../../../components/en/another_footer/footer2-en-media.scss";
+  .footer2-en {
+    @include prefixer(background-color, transparent, webkit moz o ms);
+    background-color: transparent;
+  }
+}
+
+// Media Query
+
+@media #{$maxMD} {
+  .helping-page {
+    height: 1010px !important ;
+  }
+}
+
+@media #{$maxSM} {
+  .helping-page {
+    background-image: none;
+    height: 1050px !important ;
+    nav {
+      top: 10.5px !important ;
+      h2 a {
+        font-size: 30px !important;
+      }
+      h5 a {
+        font-size: 20px !important;
+      }
+    }
+    .helping-elements {
+      top: 60.3px !important;
+      width: 100% !important ;
+      padding: 0 !important;
+      h4 {
+        font-size: 25px !important;
+      }
+      span {
+        font-size: 14px !important;
+      }
+      .container2 {
+        height: 400px !important;
+        padding: 30px 20px 30px 15px !important;
+        article {
+          width: 100% !important;
+        }
+        .input {
+          height: 45px !important ;
+        }
+        button {
+          height: 45px !important ;
+        }
+        .input-ReactPhone {
+          width: 90%;
+          .form-control {
+            padding: 11.7px 0 11.7px 80px !important ;
+          }
+        }
+      }
+    }
+    .articles {
+      margin-top: 20px !important ;
+    }
+
+    a {
+      color: #000;
+    }
+
+    .footer2-en {
+      border-top: unset !important ;
+      background-color: #3d3d3d !important ;
+    }
+  }
+}

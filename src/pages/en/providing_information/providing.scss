@@ -1,0 +1,189 @@
+@import "../../../sass/variables.scss";
+
+.remember-informations-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../media/helping-page.jpg");
+  position: relative;
+  height: 1150px;
+  .container {
+    position: absolute;
+    top: 0;
+    #{$direction1}: 0;
+    height: 100%;
+    width: 100%;
+    nav {
+      position: absolute;
+      top: 26.8px;
+      #{$direction1}: 50%;
+      z-index: 110;
+      width: 95%;
+      @include prefixer(transform, translateX(-50%), webkit moz o ms);
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        text-transform: uppercase;
+        font-family: monospace;
+        cursor: pointer;
+        a {
+          color: $red;
+          font-size: 45px;
+          text-decoration: none;
+        }
+      }
+      h5 {
+        cursor: pointer;
+        a {
+          color: $red;
+          font-size: 22px;
+          text-decoration: none;
+        }
+      }
+    }
+    .remembering-elements {
+      position: absolute;
+      width: 480px;
+      #{$direction1}: 50%;
+      top: 134px;
+      transform: translateX(-50%);
+      .container2 {
+        height: 500px;
+        background-color: #f3f3f3;
+        padding: 40px;
+        h4 {
+          font-size: 30px;
+          font-weight: normal;
+        }
+        span {
+          font-size: 15px;
+          display: block;
+          margin: 20px 0;
+        }
+        .input {
+          input {
+            display: block;
+            width: 100%;
+            height: 50px;
+            outline: 0;
+            border: 1px solid #999;
+            padding-left: 10px;
+            font-size: 16px;
+          }
+          &:not(:first-of-type) {
+            margin-top: 13.4px;
+          }
+        }
+
+        .buttons {
+          margin-top: 20.1px !important ;
+          button {
+            text-transform: capitalize;
+            outline: 0;
+            border: 0;
+            font-size: 15px;
+            padding: 10px 15px;
+            background-color: #7AB8F6;
+            pointer-events: none;
+            cursor: default;
+            color: #fff;
+            border: 0.5px solid #fff;
+            #{$margin2}: 10px;
+            @include prefixer(transition, all 0.5s, webkit moz o ms);
+            transition: all 0.4s;
+            &.effective {
+              cursor: pointer;
+              pointer-events: all;
+              background-color: #0279F0;
+            }
+          }
+
+          a {
+            background-color: red;
+            border: 0.5px solid #ccc;
+            background-color: #eaeaea;
+            @include prefixer(transition, all 0.4s, webkit moz o ms);
+            transition: all 0.4s;
+            cursor: pointer;
+            padding: 6px 15px;
+            color: #000;
+            text-decoration: none;
+            &:hover {
+              background-color: #fff;
+              box-shadow: 0 0 10px #eee;
+            }
+          }
+        }
+      }
+    }
+  }
+  // footer's component styling
+  @import "../../../components/en/another_footer/footer2-en.scss";
+  @import "../../../components/en/another_footer/footer2-en-media.scss";
+  .footer2-en {
+    @include prefixer(background-color, transparent, webkit moz o ms);
+    background-color: transparent;
+  }
+}
+
+// Media Query
+
+@media #{$maxMD} {
+  .remember-informations-page {
+    height: 1190px !important ;
+  }
+}
+
+@media #{$maxSM} {
+  .remember-informations-page {
+    background-image: none;
+    height: 1100px !important ;
+    nav {
+      top: 10.5px !important ;
+      h2 a {
+        font-size: 30px !important;
+      }
+      h5 a {
+        font-size: 20px !important;
+      }
+    }
+    .remembering-elements {
+      position: relative !important ;
+      top: 60.3px !important;
+      width: 100% !important ;
+      .container2 {
+        h4 {
+          font-size: 25px !important;
+        }
+        span {
+          font-size: 14px !important;
+        }
+        padding: 30px 20px !important;
+      }
+      .input input {
+        height: 40px !important ;
+      }
+      .buttons {
+        button {
+          display: block;
+          width: 100%;
+        }
+        a {
+          margin-top: 13.4px;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    .footer2-en {
+      border-top: unset !important ;
+      background-color: #3d3d3d !important ;
+    }
+  }
+}

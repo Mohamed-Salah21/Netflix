@@ -1,0 +1,84 @@
+@import "../../../sass/variables";
+.nav-ar {
+  z-index: 80;
+  width: 94%;
+  height: 105px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  #{$direction1}: 50%;
+  top: 0;
+  @include prefixer(transform, translate(-50%), webkit moz o ms);
+  transform: translateX(-50%);
+  .logo {
+    color: #e50914;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: monospace;
+    z-index: 100;
+    cursor: default;
+    .h2-max-sm {
+      display: none;
+    }
+  }
+  .langs-sign {
+    display: inline-flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      outline: 0;
+      border: 0;
+      text-transform: capitalize;
+      padding: 9px 15px ;
+      color: #fff;
+      background-color: $red;
+      cursor: pointer;
+    }
+  }
+}
+
+@media #{$maxMD} {
+  .nav-en {
+    .langs-sign {
+      .langs {
+        height: 35px !important;
+        .current-lang {
+          height: 35px;
+        }
+      }
+    }
+    .sign-in {
+      padding: 8px 18px !important;
+      font-size: 14px;
+    }
+  }
+}
+
+@media #{$maxSM} {
+  .nav-ar {
+    width: 95% !important;
+    .logo {
+      .h2-max-xl {
+        display: none;
+      }
+      .h2-max-sm {
+        display: inline;
+      }
+    }
+    .langs-sign {
+      position: absolute;
+      top: 0;
+      left: 0 !important ;
+      height: 100%;
+      .sign-in {
+        display: block !important ;
+        font-size: 15px !important;
+        padding: 7px 14px !important;
+        width: 120px;
+      }
+    }
+  }
+}

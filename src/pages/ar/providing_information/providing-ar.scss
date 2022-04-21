@@ -1,0 +1,199 @@
+@import "../../../sass/variables.scss";
+
+.remember-informations-ar-page {
+  direction: rtl;
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../media/helping-page.jpg");
+  position: relative;
+  height: 1170px;
+  .container {
+    position: absolute;
+    top: 0;
+    #{$direction1}: 0;
+    height: 100%;
+    width: 100%;
+    nav {
+      position: absolute;
+      top: 26.8px;
+      left: 50%;
+      z-index: 110;
+      width: 95%;
+      @include prefixer(transform, translateX(-50%), webkit moz o ms);
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        color: $red;
+        text-transform: uppercase;
+        font-size: 45px;
+        font-family: monospace;
+        cursor: pointer;
+      }
+      h5 {
+        color: $red;
+        font-size: 22px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .remembering-elements-ar {
+      width: 480px;
+      height: 510px;
+      position: absolute;
+      top: 134px;
+      left: 50%;
+      @include prefixer(transform, translateX(-50%), webkit moz o ms);
+      transform: translate(-50%);
+      .container2 {
+        background-color: #f3f3f3;
+        padding: 40px 10%;
+        h4 {
+          font-size: 25px;
+          font-weight: normal;
+        }
+        span {
+          font-size: 15px;
+          display: block;
+          margin: 20px 0;
+          font-weight: normal;
+          color: #000;
+        }
+      }
+
+      .input {
+        label {
+          font-size: 18px;
+          color: #3d3d3d;
+        }
+        input {
+          display: block;
+          width: 100%;
+          padding: 10.5px 10px;
+          outline: 0;
+          font-size: 18px;
+          border: 1px solid #999;
+        }
+      }
+      .input:nth-of-type(2) {
+        margin: 13.4px 0;
+      }
+      .buttons-ar {
+        margin-top: 20.1px;
+        button {
+          text-transform: capitalize;
+          outline: 0;
+          border: 0;
+          font-size: 15px;
+          padding: 10px 15px;
+          background-color: #7AB8F6;
+          pointer-events: none;
+          cursor: default;
+          color: #fff;
+          border: 0.5px solid #fff;
+          #{$margin1}: 10px;
+          @include prefixer(transition, all 0.5s, webkit moz o ms);
+          transition: all 0.4s;
+          &.effective {
+            cursor: pointer;
+            pointer-events: all;
+            background-color: #0279F0;
+          }
+        }
+
+        a {
+          border: 0.5px solid #ccc;
+          background-color: #eaeaea;
+          @include prefixer(transition, all 0.4s, webkit moz o ms);
+          transition: all 0.4s;
+          cursor: pointer;
+          padding: 6px 15px;
+          color: #000;
+          text-decoration: none;
+          &:hover {
+            background-color: #fff;
+            box-shadow: 0 0 10px #eee;
+          }
+        }
+      }
+    }
+
+    
+  }
+  // footer's component styling
+  @import "../../../components/ar/another_footer/footer2-ar.scss";
+  @import "../../../components/ar/another_footer/footer2-ar-media.scss";
+
+  .footer2-ar {
+    @include prefixer(background-color, transparent, webkit moz o ms);
+    background-color: transparent;
+  }
+}
+
+// Media Query
+
+@media #{$maxMD} {
+  .remember-informations-ar-page {
+    height: 1240px !important ;    
+  }
+}
+
+@media #{$maxSM} {
+  .remember-informations-ar-page {
+      background-image: none;
+      height: 1200px !important ;
+    nav {
+      top: 10.5px !important ;
+      h2 {
+        font-size: 30px !important;
+      }
+      h5 {
+        font-size: 20px !important;
+      }
+    }
+    .remembering-elements-ar {
+      height: 522.6px !important;
+      top: 60.3px !important;
+      width: 100% !important ;
+      h4 {
+        font-size: 19px !important;
+        font-weight: 500 !important ;  
+      }
+      span {
+        font-size: 14px !important;
+        font-weight: 500 !important ;  
+      }
+      .container2 {
+        padding: 30px 20px !important;
+      }
+
+      .buttons-ar {
+        button {
+          display: block;
+          width: 100%;
+        }
+        a {
+          margin-top: 13.4px;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+    .articles-ar {
+        margin-top: 0!important;
+    } 
+    .footer2-ar {
+      border-top: unset !important ;
+      background-color: #3d3d3d !important ;
+    }
+  }
+}

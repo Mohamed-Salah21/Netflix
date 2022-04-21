@@ -1,0 +1,51 @@
+@import "../../../sass/variables";
+@media #{$maxLG} {
+  .footer2-en {
+    .footer2-en-container {
+      width: 920px !important;
+    }
+  }
+}
+@media #{$maxMD} {
+  .footer2-en {
+    height: 603px !important;
+    .footer2-en-container {
+      width: 650px !important;
+      .columns {
+        display: block !important;
+        height: 268px !important;
+        & > div {
+          height: 134px !important ;
+          @include prefixer(width, calc(100% / 2) !important, webkit moz o ms);
+          width: calc(100% / 2) !important ;
+          @include prefixer(float, $direction1 !important, webkit moz o ms);
+          float: $direction1 !important;
+        }
+      }
+    }
+  }
+}
+@media #{$maxMD} {
+  .footer2-en {
+    height: 402px !important;
+    .footer2-en-container {
+      width: 90% !important;
+      .columns {
+        width: 100% !important;
+        height: 100.5px !important;
+        & > div {
+          height: 60.3px !important ;
+          li {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$maxSM} {
+  .footer2-en {
+    border-top: 5px solid rgba(#a5a5a5, 0.5) !important ;
+    height: 310px !important ;
+  }
+}

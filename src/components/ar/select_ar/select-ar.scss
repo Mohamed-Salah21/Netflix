@@ -1,0 +1,36 @@
+@import "../../../sass/variables.scss";
+.select-el-ar {
+  height: 40px;
+  width: 110px;
+  margin-left: 10px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #fff;
+  overflow: hidden;
+  i {
+    color: #fff;
+    margin: 0 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  select {
+    position: absolute;
+    font-family: $arabFont;
+    top: 0;
+    padding-right: 35px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    option {
+      color: #000;
+      height: 50px !important ;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../sass/variables.scss";
+.footer-ar {
+  padding: 67px 0;
+  background-color: #000;
+  color: #999999;
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+    h4:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .columns {
+      margin-top: 33.5px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      & > div {
+        li {
+          text-transform: capitalize;
+          cursor: pointer;
+          width: auto;
+          margin-top: 13.4px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        li:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+    .select-el-ar {
+      margin: 20.1px 0;
+    }
+    .netflix-egy {
+      &.none {
+        opacity: 0;
+        @include prefixer(pointer-events, none, webkit moz o ms);
+        pointer-events: none;
+        z-index: -100;
+      }
+    }
+  }
+}

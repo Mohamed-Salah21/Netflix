@@ -1,0 +1,34 @@
+.articles {
+  color: #999;
+  margin-top: 10.5px;
+  span,
+  a {
+    color: #999;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .article {
+    margin-top: 13.4px;
+  }
+}
+@media (max-width: 768px) {
+  .articles {
+    height: 500px;
+    background-color: #f3f3f3;
+    padding: 10px 20px 67px 20px !important;
+    color: #000 !important ;
+    margin-top: 0 !important ;
+    a {
+      color: #000 !important;
+    }
+    span {
+      color: #000 !important;
+      display: block;
+      font-size: 17px !important ;
+      width: 80px;
+    }
+    .article {
+      margin-top: 15px;
+    }
+  }
+}
